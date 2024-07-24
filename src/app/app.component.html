@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="card">
     <div class="card-body">
       <form  [formGroup]="form" (ngSubmit)="submit()">
@@ -18,6 +18,15 @@
         <app-address-group label="Biiling Address"  controlKey="billingAddress"></app-address-group>
         <button class="btn btn-info">Submit</button>
       </form>
+    </div>
+  </div>
+</div> -->
+
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

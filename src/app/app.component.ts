@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CounterComponent } from "./counter/counter.component";
+import { CounterComponent } from "./components/counter/counter.component";
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { AddressGroupComponent } from "./address-group/address-group.component";
+import { AddressGroupComponent } from "./components/address-group/address-group.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { PostsComponent } from "./components/posts/posts.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CounterComponent, ReactiveFormsModule, AddressGroupComponent],
+  imports: [RouterOutlet, CounterComponent, ReactiveFormsModule, AddressGroupComponent, HeaderComponent, PostsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -29,10 +31,6 @@ export class AppComponent implements OnInit {
    
   }
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('hello')
-      this.counter = 20;
-    },2000);
   }
 
   submit() {
